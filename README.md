@@ -1,14 +1,14 @@
-# Survey Allocation Optimisation — Tracksuit DS Take-Home
+# Survey Allocation Optimisation: Tracksuit DS Take-Home
 
-A constrained optimisation solution for minimising the total number of survey respondents needed to guarantee every Tracksuit category receives its monthly qualified sample, while respecting an 8-minute respondent time budget and national demographic representativeness requirements.
+A constrained optimisation solution for minimising the total number of survey respondents needed to guarantee every Tracksuit category receives its monthly qualified sample, while respecting an 8 minute respondent time budget and national demographic representativeness requirements.
 
 ---
 
 ## Problem Statement
 
-Tracksuit runs monthly surveys across ~80 product categories. Each category requires **n = 200 qualified respondents per month** (≥ 2,400 per year). A respondent "qualifies" for a category by answering its screening question affirmatively — a Bernoulli draw with probability equal to that category's incidence rate.
+Tracksuit runs monthly surveys across ~80 product categories. Each category requires **n = 200 qualified respondents per month** (≥ 2,400 per year). A respondent "qualifies" for a category by answering its screening question affirmatively, a Bernoulli draw with probability equal to that category's incidence rate.
 
-The challenge is to design **survey bundles** — assignments of one, two, or three categories to a single respondent — and determine how many respondents to allocate to each bundle, such that every category's qualification target is met at minimum total recruiting cost.
+The challenge is to design **survey bundles**, assignments of one, two, or three categories to a single respondent and determine how many respondents to allocate to each bundle, such that every category's qualification target is met at minimum total recruiting cost.
 
 Three constraints make this non-trivial:
 
@@ -36,13 +36,13 @@ The primary dataset. 77 categories with the following fields:
 
 ### `data/fake_category_data_and_toy_problem.xlsx`
 
-**Use this spreadsheet as a sandbox before touching any code.** It contains the full category data alongside a toy-problem tab scaled to ~10 categories and a target of 10 qualified respondents per category. Working through manual bundle assignments in the spreadsheet builds the intuition needed to understand which constraints bind first (time vs. incidence vs. coverage) and which pairing strategies are naturally efficient — low-incidence categories paired with shorter surveys, similar-incidence categories grouped together to avoid over-delivery. The algorithmic solutions in `main.py` directly encode the intuitions developed here.
+**Use this spreadsheet as a sandbox before touching any code.** It contains the full category data alongside a toy-problem tab scaled to ~10 categories and a target of 10 qualified respondents per category. Working through manual bundle assignments in the spreadsheet builds the intuition needed to understand which constraints bind first (time vs. incidence vs. coverage) and which pairing strategies are naturally efficient, low incidence categories paired with shorter surveys, similar-incidence categories grouped together to avoid over-delivery. The algorithmic solutions in `main.py` directly encode the intuitions developed here.
 
 ---
 
 ## Project Plan
 
-The full staged approach — toy problem, naive baseline, LP formulation, greedy heuristic, simulation, and dashboard — is documented in **`tracksuit_project_plan.html`**. Open it in a browser for the complete breakdown with objectives, rationale, and success criteria per stage.
+The full staged approach: toy problem, naive baseline, LP formulation, greedy heuristic, simulation, and dashboard is documented in **`tracksuit_project_plan.html`**. Open it in a browser for the complete breakdown with objectives, rationale, and success criteria per stage.
 
 ---
 
@@ -50,11 +50,11 @@ The full staged approach — toy problem, naive baseline, LP formulation, greedy
 
 ```
 ds-survey-george-luther/
-├── main.py                     # Core algorithm — all allocation logic and simulation
+├── main.py                     # Core algorithm all allocation logic and simulation
 ├── app.py                      # Streamlit dashboard
 ├── data/
 │   ├── fake_category_data.csv              # Primary dataset (77 categories)
-│   └── fake_category_data_and_toy_problem.xlsx   # Manual sandbox — start here
+│   └── fake_category_data_and_toy_problem.xlsx   # Manual sandbox start here
 ├── model_outputs/              # Generated on python main.py (gitignored or committed)
 │   ├── bundles_naive.json
 │   ├── bundles_greedy.json
@@ -67,7 +67,7 @@ ds-survey-george-luther/
 └── tracksuit_project_plan.html # Full project plan with staged approach
 ```
 
-### `main.py` — Key Functions
+### `main.py` - Key Functions
 
 | Function | Purpose |
 |---|---|
@@ -80,7 +80,7 @@ ds-survey-george-luther/
 | `simulate_allocation(bundles, lookup, n_months, rng)` | Monte Carlo simulation, returns qualified counts, mean/median times, % over budget |
 | `save_outputs(models, targets, lookup)` | Persist bundles and simulation summaries to `model_outputs/` |
 
-### `app.py` — Dashboard Tabs
+### `app.py` - Dashboard Tabs
 
 | Tab | Content |
 |---|---|
@@ -129,7 +129,7 @@ plotly
 | Models to run | Select any combination of Naive, Greedy, LP-Optimal |
 | Simulation months | 1–24 months; 12 months = one annual cycle, 24 months = two-year stress test |
 | Probabilistic guarantee (95%) | ON: inflates respondent counts via the closed-form confidence interval formula. OFF: deterministic `ceil(200/p)` baseline |
-| Safety buffer (overage) | +0/5/10/15/20% above the 200 target — additional headroom for stochastic shortfalls. Scoring still uses the original 200 threshold |
+| Safety buffer (overage) | +0/5/10/15/20% above the 200 target: additional headroom for stochastic shortfalls. Scoring still uses the original 200 threshold |
 | Run / Refresh | Each press produces a fresh stochastic simulation (new unseeded RNG) |
 
 ---
@@ -138,7 +138,7 @@ plotly
 
 Generated by `python main.py`. Three models × three file types:
 
-**`bundles_{model}.json`** — one record per bundle:
+**`bundles_{model}.json`**, one record per bundle:
 ```json
 {
   "bundle_id": 12,
@@ -155,9 +155,9 @@ Generated by `python main.py`. Three models × three file types:
 }
 ```
 
-**`simulation_summary.csv`** — one row per category, columns for each model's mean qualified, % months meeting target, min, and max.
+**`simulation_summary.csv`**: one row per category, columns for each model's mean qualified, % months meeting target, min, and max.
 
-**`run_summary.json`** — top-level metrics per model: total respondents, bundle size breakdown, % categories meeting target, average mean and median interview time.
+**`run_summary.json`**: top-level metrics per model: total respondents, bundle size breakdown, % categories meeting target, average mean and median interview time.
 
 ---
 
@@ -167,9 +167,9 @@ Generated by `python main.py`. Three models × three file types:
 
 **One bundle per gender-specific category.** Categories labelled female-only (4, 35, 45) or male-only (31) are each given independent single-category bundles. Pooling all female categories into one bundle sized for the rarest causes the more common female categories to over-deliver by 2–3×, inflating their qualified counts without reducing cost.
 
-**Incidence ratio cap of 1.3 within bundles.** When a rare category (e.g. IR = 0.096) is bundled with a more common one (e.g. IR = 0.131), the bundle is sized for the rare category — which over-delivers for the common one. A cap of 1.3× prevents the worst pairings: no category in a bundle receives more than ~30% more qualified respondents than the seed category's probabilistic target.
+**Incidence ratio cap of 1.3 within bundles.** When a rare category (e.g. IR = 0.096) is bundled with a more common one (e.g. IR = 0.131), the bundle is sized for the rare category, which over-delivers for the common one. A cap of 1.3× prevents the worst pairings: no category in a bundle receives more than ~30% more qualified respondents than the seed category's probabilistic target.
 
-**One-sided z-score for the 95% guarantee.** The probabilistic allocation uses `z = 1.6449 = norm.ppf(0.95)`, not `1.96`. This is correct because the constraint is one-sided — we only care about the lower tail (failing to reach 200), not the upper tail. Using 1.96 would over-allocate by approximately 10% for no benefit.
+**One-sided z-score for the 95% guarantee.** The probabilistic allocation uses `z = 1.6449 = norm.ppf(0.95)`, not `1.96`. This is correct because the constraint is one-sided, we only care about the lower tail (failing to reach 200), not the upper tail. Using 1.96 would over-allocate by approximately 10% for no benefit.
 
 ---
 
@@ -183,6 +183,110 @@ Per the project instructions:
 All results are fully reproducible: `python main.py` runs all three models with a fixed seed and saves outputs to `model_outputs/`. `streamlit run app.py` launches the interactive dashboard.
 
 ---
+
+## Future Extensions
+
+Several extensions were identified during development that would improve operational realism and increase optimisation quality.
+
+### Demographic-Specific Incidence Rates
+
+The current model assumes population-wide incidence probabilities.
+
+A more realistic extension would estimate:
+
+P(category | demographic)
+
+for combinations of:
+- gender
+- age bracket
+- region
+
+This would allow the optimiser to:
+- allocate demographic-specific bundles
+- reduce over-sampling
+- improve qualification efficiency
+
+For example:
+- children's television categories may skew heavily toward parents
+- cosmetics categories may skew toward female demographics
+- automotive modification categories may skew toward younger male demographics
+
+### Adaptive Mid-Month Reallocation
+
+The current system allocates all respondents upfront.
+
+A production system could instead:
+1. monitor live category completion rates
+2. detect underperforming categories mid-fieldwork
+3. dynamically reallocate future respondents
+
+This would reduce over-delivery and improve operational efficiency under real stochastic outcomes.
+
+### Reinforcement Learning / Sequential Optimisation
+
+The current optimisation uses static linear programming and greedy heuristics.
+
+Future versions could model allocation as a sequential decision problem using:
+- reinforcement learning
+- contextual bandits
+- online optimisation
+
+This would allow the system to:
+- learn bundle effectiveness over time
+- adapt to changing incidence behaviour
+- optimise long-run respondent efficiency dynamically
+
+### Integer Programming & Advanced Solvers
+
+The current LP formulation uses continuous relaxation with post-rounding.
+
+Future work could explore:
+- integer programming
+- branch-and-bound optimisation
+- commercial solvers such as Gurobi or CPLEX
+
+particularly if additional operational constraints are introduced.
+
+### Respondent Fatigue Modelling
+
+The current model assumes qualifier questions have zero time cost and no behavioural impact.
+
+A richer behavioural model could include:
+- fatigue penalties (sandwiching multiple surveys)
+- diminishing completion likelihood as bundle complexity increases
+
+This would better reflect real survey operations.
+
+### Dockerized Deployment
+
+The Streamlit dashboard could be containerised using Docker to:
+- easiest extension to the project.
+- simplify deployment
+- improve reproducibility
+- support cloud execution environments
+
+### Bundle Frequency & Structural Analysis
+
+An additional analysis layer could examine:
+- which bundles appear most frequently in the optimal solution
+- which categories consistently co-occur (existing project has category analysis per-month, just not cross-category analysis like this bullet point)
+- which categories act as "anchor" categories within efficient bundles
+
+This would provide operational insight into:
+- category compatibility
+- high-efficiency survey structures
+- recurring optimisation patterns
+
+### Fairness & Respondent Utilisation Metrics
+
+Future versions could explicitly optimise:
+- variance of respondent workload
+- workload fairness
+- expected value generated per respondent
+
+rather than minimising respondents alone.
+
+This would better align optimisation outputs with operational recruitment economics and respondent experience considerations.
 
 ## Data Sources
 
