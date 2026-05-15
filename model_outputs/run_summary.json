@@ -1,0 +1,71 @@
+{
+  "naive": {
+    "total_respondents": 44790,
+    "n_bundles": 77,
+    "bundle_size_breakdown": {
+      "singles": {
+        "count": 77,
+        "respondents": 44790
+      },
+      "pairs": {
+        "count": 0,
+        "respondents": 0
+      },
+      "triples": {
+        "count": 0,
+        "respondents": 0
+      }
+    },
+    "pct_categories_meeting_target": 95.64,
+    "mean_qualified_per_category": 217.5,
+    "avg_mean_respondent_time_s": 40.7,
+    "avg_median_respondent_time_s": 0.0,
+    "mean_pct_over_budget": 0.0
+  },
+  "greedy": {
+    "total_respondents": 20208,
+    "n_bundles": 30,
+    "bundle_size_breakdown": {
+      "singles": {
+        "count": 6,
+        "respondents": 6970
+      },
+      "pairs": {
+        "count": 1,
+        "respondents": 1181
+      },
+      "triples": {
+        "count": 23,
+        "respondents": 12057
+      }
+    },
+    "pct_categories_meeting_target": 97.26,
+    "mean_qualified_per_category": 221.5,
+    "avg_mean_respondent_time_s": 92.02,
+    "avg_median_respondent_time_s": 58.38,
+    "mean_pct_over_budget": 0.0
+  },
+  "lp_optimal": {
+    "total_respondents": 19601,
+    "n_bundles": 77,
+    "bundle_size_breakdown": {
+      "singles": {
+        "count": 6,
+        "respondents": 6970
+      },
+      "pairs": {
+        "count": 0,
+        "respondents": 0
+      },
+      "triples": {
+        "count": 71,
+        "respondents": 12631
+      }
+    },
+    "pct_categories_meeting_target": 96.09,
+    "mean_qualified_per_category": 218.0,
+    "avg_mean_respondent_time_s": 93.18,
+    "avg_median_respondent_time_s": 60.07,
+    "mean_pct_over_budget": 0.0
+  }
+}

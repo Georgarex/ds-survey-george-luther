@@ -1,0 +1,1867 @@
+[
+  {
+    "bundle_id": 0,
+    "size": 1,
+    "n_respondents": 1162,
+    "worst_case_time_s": 115.93,
+    "expected_time_s": 22.15,
+    "gender_restricted": "Female",
+    "categories": [
+      {
+        "category_id": 4,
+        "category_name": "Self Tan (Female Only)",
+        "incidence_rate": 0.191096
+      }
+    ]
+  },
+  {
+    "bundle_id": 1,
+    "size": 1,
+    "n_respondents": 585,
+    "worst_case_time_s": 57.93,
+    "expected_time_s": 21.72,
+    "gender_restricted": "Female",
+    "categories": [
+      {
+        "category_id": 35,
+        "category_name": "Women's Activewear (Female Only)",
+        "incidence_rate": 0.375
+      }
+    ]
+  },
+  {
+    "bundle_id": 2,
+    "size": 1,
+    "n_respondents": 514,
+    "worst_case_time_s": 112.96,
+    "expected_time_s": 48.08,
+    "gender_restricted": "Female",
+    "categories": [
+      {
+        "category_id": 45,
+        "category_name": "Skincare (Female Only)",
+        "incidence_rate": 0.425631
+      }
+    ]
+  },
+  {
+    "bundle_id": 3,
+    "size": 1,
+    "n_respondents": 673,
+    "worst_case_time_s": 81.05,
+    "expected_time_s": 26.5,
+    "gender_restricted": "Male",
+    "categories": [
+      {
+        "category_id": 31,
+        "category_name": "Men's Clothing (Male Only)",
+        "incidence_rate": 0.327007
+      }
+    ]
+  },
+  {
+    "bundle_id": 4,
+    "size": 1,
+    "n_respondents": 2337,
+    "worst_case_time_s": 164.5,
+    "expected_time_s": 15.73,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 1,
+        "category_name": "Fertility or IVF service",
+        "incidence_rate": 0.095621
+      }
+    ]
+  },
+  {
+    "bundle_id": 5,
+    "size": 1,
+    "n_respondents": 1699,
+    "worst_case_time_s": 69.83,
+    "expected_time_s": 9.16,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 2,
+        "category_name": "Big and Tall Men's Clothing",
+        "incidence_rate": 0.131231
+      }
+    ]
+  },
+  {
+    "bundle_id": 6,
+    "size": 3,
+    "n_respondents": 947,
+    "worst_case_time_s": 355.6,
+    "expected_time_s": 74.54,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 6,
+        "category_name": "Baby products",
+        "incidence_rate": 0.188133
+      },
+      {
+        "category_id": 5,
+        "category_name": "Baby Feeding",
+        "incidence_rate": 0.198451
+      },
+      {
+        "category_id": 9,
+        "category_name": "Car Finance",
+        "incidence_rate": 0.234053
+      }
+    ]
+  },
+  {
+    "bundle_id": 7,
+    "size": 3,
+    "n_respondents": 235,
+    "worst_case_time_s": 358.06,
+    "expected_time_s": 79.55,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 6,
+        "category_name": "Baby products",
+        "incidence_rate": 0.188133
+      },
+      {
+        "category_id": 7,
+        "category_name": "Online Healthcare",
+        "incidence_rate": 0.226758
+      },
+      {
+        "category_id": 14,
+        "category_name": "Weight-loss",
+        "incidence_rate": 0.231919
+      }
+    ]
+  },
+  {
+    "bundle_id": 8,
+    "size": 3,
+    "n_respondents": 173,
+    "worst_case_time_s": 370.26,
+    "expected_time_s": 79.96,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 5,
+        "category_name": "Baby Feeding",
+        "incidence_rate": 0.198451
+      },
+      {
+        "category_id": 7,
+        "category_name": "Online Healthcare",
+        "incidence_rate": 0.226758
+      },
+      {
+        "category_id": 11,
+        "category_name": "Nappies & wipes",
+        "incidence_rate": 0.244664
+      }
+    ]
+  },
+  {
+    "bundle_id": 9,
+    "size": 3,
+    "n_respondents": 571,
+    "worst_case_time_s": 354.3,
+    "expected_time_s": 81.87,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 7,
+        "category_name": "Online Healthcare",
+        "incidence_rate": 0.226758
+      },
+      {
+        "category_id": 14,
+        "category_name": "Weight-loss",
+        "incidence_rate": 0.231919
+      },
+      {
+        "category_id": 13,
+        "category_name": "Accounting Services (Sole Traders)",
+        "incidence_rate": 0.241711
+      }
+    ]
+  },
+  {
+    "bundle_id": 10,
+    "size": 3,
+    "n_respondents": 151,
+    "worst_case_time_s": 228.8,
+    "expected_time_s": 54.12,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 14,
+        "category_name": "Weight-loss",
+        "incidence_rate": 0.231919
+      },
+      {
+        "category_id": 13,
+        "category_name": "Accounting Services (Sole Traders)",
+        "incidence_rate": 0.241711
+      },
+      {
+        "category_id": 11,
+        "category_name": "Nappies & wipes",
+        "incidence_rate": 0.244664
+      }
+    ]
+  },
+  {
+    "bundle_id": 11,
+    "size": 3,
+    "n_respondents": 196,
+    "worst_case_time_s": 205.0,
+    "expected_time_s": 56.52,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 13,
+        "category_name": "Accounting Services (Sole Traders)",
+        "incidence_rate": 0.241711
+      },
+      {
+        "category_id": 12,
+        "category_name": "Car Rental",
+        "incidence_rate": 0.269536
+      },
+      {
+        "category_id": 15,
+        "category_name": "Dark Spirits",
+        "incidence_rate": 0.301934
+      }
+    ]
+  },
+  {
+    "bundle_id": 12,
+    "size": 3,
+    "n_respondents": 463,
+    "worst_case_time_s": 250.64,
+    "expected_time_s": 68.13,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 11,
+        "category_name": "Nappies & wipes",
+        "incidence_rate": 0.244664
+      },
+      {
+        "category_id": 10,
+        "category_name": "Designer Women's Clothing",
+        "incidence_rate": 0.251553
+      },
+      {
+        "category_id": 20,
+        "category_name": "Vocational Training",
+        "incidence_rate": 0.313074
+      }
+    ]
+  },
+  {
+    "bundle_id": 13,
+    "size": 3,
+    "n_respondents": 119,
+    "worst_case_time_s": 288.14,
+    "expected_time_s": 85.78,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 11,
+        "category_name": "Nappies & wipes",
+        "incidence_rate": 0.244664
+      },
+      {
+        "category_id": 19,
+        "category_name": "Men's Online Health Providers",
+        "incidence_rate": 0.304927
+      },
+      {
+        "category_id": 26,
+        "category_name": "Online Betting Services",
+        "incidence_rate": 0.308978
+      }
+    ]
+  },
+  {
+    "bundle_id": 14,
+    "size": 3,
+    "n_respondents": 417,
+    "worst_case_time_s": 399.23,
+    "expected_time_s": 115.97,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 10,
+        "category_name": "Designer Women's Clothing",
+        "incidence_rate": 0.251553
+      },
+      {
+        "category_id": 22,
+        "category_name": "Car Modifications",
+        "incidence_rate": 0.305242
+      },
+      {
+        "category_id": 17,
+        "category_name": "Craft Beer",
+        "incidence_rate": 0.312757
+      }
+    ]
+  },
+  {
+    "bundle_id": 15,
+    "size": 3,
+    "n_respondents": 327,
+    "worst_case_time_s": 378.07,
+    "expected_time_s": 110.16,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 12,
+        "category_name": "Car Rental",
+        "incidence_rate": 0.269536
+      },
+      {
+        "category_id": 8,
+        "category_name": "Funeral Services",
+        "incidence_rate": 0.273859
+      },
+      {
+        "category_id": 16,
+        "category_name": "Fresh Coffee",
+        "incidence_rate": 0.321208
+      }
+    ]
+  },
+  {
+    "bundle_id": 16,
+    "size": 3,
+    "n_respondents": 135,
+    "worst_case_time_s": 335.76,
+    "expected_time_s": 101.1,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 12,
+        "category_name": "Car Rental",
+        "incidence_rate": 0.269536
+      },
+      {
+        "category_id": 22,
+        "category_name": "Car Modifications",
+        "incidence_rate": 0.305242
+      },
+      {
+        "category_id": 17,
+        "category_name": "Craft Beer",
+        "incidence_rate": 0.312757
+      }
+    ]
+  },
+  {
+    "bundle_id": 17,
+    "size": 3,
+    "n_respondents": 10,
+    "worst_case_time_s": 286.46,
+    "expected_time_s": 90.03,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 12,
+        "category_name": "Car Rental",
+        "incidence_rate": 0.269536
+      },
+      {
+        "category_id": 18,
+        "category_name": "Car & Motorhome Rentals",
+        "incidence_rate": 0.311029
+      },
+      {
+        "category_id": 27,
+        "category_name": "Buy Now Pay Later (Gimmie)",
+        "incidence_rate": 0.350355
+      }
+    ]
+  },
+  {
+    "bundle_id": 18,
+    "size": 3,
+    "n_respondents": 154,
+    "worst_case_time_s": 252.56,
+    "expected_time_s": 76.38,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 12,
+        "category_name": "Car Rental",
+        "incidence_rate": 0.269536
+      },
+      {
+        "category_id": 17,
+        "category_name": "Craft Beer",
+        "incidence_rate": 0.312757
+      },
+      {
+        "category_id": 20,
+        "category_name": "Vocational Training",
+        "incidence_rate": 0.313074
+      }
+    ]
+  },
+  {
+    "bundle_id": 19,
+    "size": 3,
+    "n_respondents": 351,
+    "worst_case_time_s": 321.44,
+    "expected_time_s": 96.89,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 8,
+        "category_name": "Funeral Services",
+        "incidence_rate": 0.273859
+      },
+      {
+        "category_id": 23,
+        "category_name": "Baby and Child Products",
+        "incidence_rate": 0.308464
+      },
+      {
+        "category_id": 27,
+        "category_name": "Buy Now Pay Later (Gimmie)",
+        "incidence_rate": 0.350355
+      }
+    ]
+  },
+  {
+    "bundle_id": 20,
+    "size": 3,
+    "n_respondents": 130,
+    "worst_case_time_s": 340.47,
+    "expected_time_s": 102.77,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 8,
+        "category_name": "Funeral Services",
+        "incidence_rate": 0.273859
+      },
+      {
+        "category_id": 25,
+        "category_name": "Shares, brokers, and trading apps/website",
+        "incidence_rate": 0.320427
+      },
+      {
+        "category_id": 33,
+        "category_name": "Recruitment",
+        "incidence_rate": 0.334335
+      }
+    ]
+  },
+  {
+    "bundle_id": 21,
+    "size": 3,
+    "n_respondents": 364,
+    "worst_case_time_s": 277.19,
+    "expected_time_s": 80.67,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 24,
+        "category_name": "Luxury Leather Bags/Accessories",
+        "incidence_rate": 0.275145
+      },
+      {
+        "category_id": 15,
+        "category_name": "Dark Spirits",
+        "incidence_rate": 0.301934
+      },
+      {
+        "category_id": 23,
+        "category_name": "Baby and Child Products",
+        "incidence_rate": 0.308464
+      }
+    ]
+  },
+  {
+    "bundle_id": 22,
+    "size": 3,
+    "n_respondents": 439,
+    "worst_case_time_s": 444.18,
+    "expected_time_s": 132.48,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 24,
+        "category_name": "Luxury Leather Bags/Accessories",
+        "incidence_rate": 0.275145
+      },
+      {
+        "category_id": 19,
+        "category_name": "Men's Online Health Providers",
+        "incidence_rate": 0.304927
+      },
+      {
+        "category_id": 18,
+        "category_name": "Car & Motorhome Rentals",
+        "incidence_rate": 0.311029
+      }
+    ]
+  },
+  {
+    "bundle_id": 23,
+    "size": 3,
+    "n_respondents": 166,
+    "worst_case_time_s": 427.71,
+    "expected_time_s": 134.27,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 21,
+        "category_name": "Period Products",
+        "incidence_rate": 0.290499
+      },
+      {
+        "category_id": 19,
+        "category_name": "Men's Online Health Providers",
+        "incidence_rate": 0.304927
+      },
+      {
+        "category_id": 32,
+        "category_name": "Meal Kit Delivery Service",
+        "incidence_rate": 0.363191
+      }
+    ]
+  },
+  {
+    "bundle_id": 24,
+    "size": 3,
+    "n_respondents": 260,
+    "worst_case_time_s": 354.34,
+    "expected_time_s": 107.06,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 21,
+        "category_name": "Period Products",
+        "incidence_rate": 0.290499
+      },
+      {
+        "category_id": 26,
+        "category_name": "Online Betting Services",
+        "incidence_rate": 0.308978
+      },
+      {
+        "category_id": 18,
+        "category_name": "Car & Motorhome Rentals",
+        "incidence_rate": 0.311029
+      }
+    ]
+  },
+  {
+    "bundle_id": 25,
+    "size": 3,
+    "n_respondents": 335,
+    "worst_case_time_s": 265.53,
+    "expected_time_s": 79.89,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 21,
+        "category_name": "Period Products",
+        "incidence_rate": 0.290499
+      },
+      {
+        "category_id": 26,
+        "category_name": "Online Betting Services",
+        "incidence_rate": 0.308978
+      },
+      {
+        "category_id": 25,
+        "category_name": "Shares, brokers, and trading apps/website",
+        "incidence_rate": 0.320427
+      }
+    ]
+  },
+  {
+    "bundle_id": 26,
+    "size": 3,
+    "n_respondents": 171,
+    "worst_case_time_s": 411.93,
+    "expected_time_s": 138.61,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 15,
+        "category_name": "Dark Spirits",
+        "incidence_rate": 0.301934
+      },
+      {
+        "category_id": 22,
+        "category_name": "Car Modifications",
+        "incidence_rate": 0.305242
+      },
+      {
+        "category_id": 36,
+        "category_name": "Shares, funds, and term deposits",
+        "incidence_rate": 0.39065
+      }
+    ]
+  },
+  {
+    "bundle_id": 27,
+    "size": 3,
+    "n_respondents": 88,
+    "worst_case_time_s": 334.82,
+    "expected_time_s": 125.58,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 20,
+        "category_name": "Vocational Training",
+        "incidence_rate": 0.313074
+      },
+      {
+        "category_id": 30,
+        "category_name": "Buy Now Pay Later (Laybuy)",
+        "incidence_rate": 0.394511
+      },
+      {
+        "category_id": 29,
+        "category_name": "Pre-mixed alcoholic drinks/RTDs",
+        "incidence_rate": 0.401094
+      }
+    ]
+  },
+  {
+    "bundle_id": 28,
+    "size": 3,
+    "n_respondents": 223,
+    "worst_case_time_s": 281.67,
+    "expected_time_s": 97.41,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 25,
+        "category_name": "Shares, brokers, and trading apps/website",
+        "incidence_rate": 0.320427
+      },
+      {
+        "category_id": 16,
+        "category_name": "Fresh Coffee",
+        "incidence_rate": 0.321208
+      },
+      {
+        "category_id": 29,
+        "category_name": "Pre-mixed alcoholic drinks/RTDs",
+        "incidence_rate": 0.401094
+      }
+    ]
+  },
+  {
+    "bundle_id": 29,
+    "size": 3,
+    "n_respondents": 136,
+    "worst_case_time_s": 367.72,
+    "expected_time_s": 123.99,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 16,
+        "category_name": "Fresh Coffee",
+        "incidence_rate": 0.321208
+      },
+      {
+        "category_id": 33,
+        "category_name": "Recruitment",
+        "incidence_rate": 0.334335
+      },
+      {
+        "category_id": 32,
+        "category_name": "Meal Kit Delivery Service",
+        "incidence_rate": 0.363191
+      }
+    ]
+  },
+  {
+    "bundle_id": 30,
+    "size": 3,
+    "n_respondents": 393,
+    "worst_case_time_s": 296.4,
+    "expected_time_s": 113.51,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 33,
+        "category_name": "Recruitment",
+        "incidence_rate": 0.334335
+      },
+      {
+        "category_id": 39,
+        "category_name": "White Spirits",
+        "incidence_rate": 0.411029
+      },
+      {
+        "category_id": 37,
+        "category_name": "Beddings",
+        "incidence_rate": 0.417827
+      }
+    ]
+  },
+  {
+    "bundle_id": 31,
+    "size": 3,
+    "n_respondents": 82,
+    "worst_case_time_s": 339.37,
+    "expected_time_s": 131.36,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 27,
+        "category_name": "Buy Now Pay Later (Gimmie)",
+        "incidence_rate": 0.350355
+      },
+      {
+        "category_id": 32,
+        "category_name": "Meal Kit Delivery Service",
+        "incidence_rate": 0.363191
+      },
+      {
+        "category_id": 38,
+        "category_name": "Natural Health Supplements",
+        "incidence_rate": 0.425092
+      }
+    ]
+  },
+  {
+    "bundle_id": 32,
+    "size": 3,
+    "n_respondents": 186,
+    "worst_case_time_s": 386.93,
+    "expected_time_s": 155.21,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 27,
+        "category_name": "Buy Now Pay Later (Gimmie)",
+        "incidence_rate": 0.350355
+      },
+      {
+        "category_id": 30,
+        "category_name": "Buy Now Pay Later (Laybuy)",
+        "incidence_rate": 0.394511
+      },
+      {
+        "category_id": 40,
+        "category_name": "Free-from Baked Goods",
+        "incidence_rate": 0.441035
+      }
+    ]
+  },
+  {
+    "bundle_id": 33,
+    "size": 3,
+    "n_respondents": 60,
+    "worst_case_time_s": 416.87,
+    "expected_time_s": 160.66,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 32,
+        "category_name": "Meal Kit Delivery Service",
+        "incidence_rate": 0.363191
+      },
+      {
+        "category_id": 36,
+        "category_name": "Shares, funds, and term deposits",
+        "incidence_rate": 0.39065
+      },
+      {
+        "category_id": 30,
+        "category_name": "Buy Now Pay Later (Laybuy)",
+        "incidence_rate": 0.394511
+      }
+    ]
+  },
+  {
+    "bundle_id": 34,
+    "size": 3,
+    "n_respondents": 23,
+    "worst_case_time_s": 288.43,
+    "expected_time_s": 110.56,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 32,
+        "category_name": "Meal Kit Delivery Service",
+        "incidence_rate": 0.363191
+      },
+      {
+        "category_id": 36,
+        "category_name": "Shares, funds, and term deposits",
+        "incidence_rate": 0.39065
+      },
+      {
+        "category_id": 28,
+        "category_name": "Alcohol Free Drinks",
+        "incidence_rate": 0.412535
+      }
+    ]
+  },
+  {
+    "bundle_id": 35,
+    "size": 3,
+    "n_respondents": 140,
+    "worst_case_time_s": 180.51,
+    "expected_time_s": 69.35,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 32,
+        "category_name": "Meal Kit Delivery Service",
+        "incidence_rate": 0.363191
+      },
+      {
+        "category_id": 39,
+        "category_name": "White Spirits",
+        "incidence_rate": 0.411029
+      },
+      {
+        "category_id": 28,
+        "category_name": "Alcohol Free Drinks",
+        "incidence_rate": 0.412535
+      }
+    ]
+  },
+  {
+    "bundle_id": 36,
+    "size": 3,
+    "n_respondents": 104,
+    "worst_case_time_s": 404.83,
+    "expected_time_s": 172.96,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 36,
+        "category_name": "Shares, funds, and term deposits",
+        "incidence_rate": 0.39065
+      },
+      {
+        "category_id": 38,
+        "category_name": "Natural Health Supplements",
+        "incidence_rate": 0.425092
+      },
+      {
+        "category_id": 49,
+        "category_name": "Real Estate Service",
+        "incidence_rate": 0.485909
+      }
+    ]
+  },
+  {
+    "bundle_id": 37,
+    "size": 3,
+    "n_respondents": 204,
+    "worst_case_time_s": 335.05,
+    "expected_time_s": 142.13,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 36,
+        "category_name": "Shares, funds, and term deposits",
+        "incidence_rate": 0.39065
+      },
+      {
+        "category_id": 44,
+        "category_name": "Female Skincare",
+        "incidence_rate": 0.443463
+      },
+      {
+        "category_id": 48,
+        "category_name": "Female Clothing (Black Pepper)",
+        "incidence_rate": 0.493953
+      }
+    ]
+  },
+  {
+    "bundle_id": 38,
+    "size": 3,
+    "n_respondents": 223,
+    "worst_case_time_s": 351.84,
+    "expected_time_s": 139.67,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 30,
+        "category_name": "Buy Now Pay Later (Laybuy)",
+        "incidence_rate": 0.394511
+      },
+      {
+        "category_id": 34,
+        "category_name": "Alcohol Free Beer",
+        "incidence_rate": 0.397293
+      },
+      {
+        "category_id": 29,
+        "category_name": "Pre-mixed alcoholic drinks/RTDs",
+        "incidence_rate": 0.401094
+      }
+    ]
+  },
+  {
+    "bundle_id": 39,
+    "size": 3,
+    "n_respondents": 329,
+    "worst_case_time_s": 380.23,
+    "expected_time_s": 157.05,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 34,
+        "category_name": "Alcohol Free Beer",
+        "incidence_rate": 0.397293
+      },
+      {
+        "category_id": 43,
+        "category_name": "Dog Food",
+        "incidence_rate": 0.411812
+      },
+      {
+        "category_id": 38,
+        "category_name": "Natural Health Supplements",
+        "incidence_rate": 0.425092
+      }
+    ]
+  },
+  {
+    "bundle_id": 40,
+    "size": 3,
+    "n_respondents": 13,
+    "worst_case_time_s": 247.92,
+    "expected_time_s": 103.91,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 29,
+        "category_name": "Pre-mixed alcoholic drinks/RTDs",
+        "incidence_rate": 0.401094
+      },
+      {
+        "category_id": 43,
+        "category_name": "Dog Food",
+        "incidence_rate": 0.411812
+      },
+      {
+        "category_id": 48,
+        "category_name": "Female Clothing (Black Pepper)",
+        "incidence_rate": 0.493953
+      }
+    ]
+  },
+  {
+    "bundle_id": 41,
+    "size": 3,
+    "n_respondents": 190,
+    "worst_case_time_s": 366.19,
+    "expected_time_s": 157.25,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 43,
+        "category_name": "Dog Food",
+        "incidence_rate": 0.411812
+      },
+      {
+        "category_id": 41,
+        "category_name": "Camping Equipments",
+        "incidence_rate": 0.431193
+      },
+      {
+        "category_id": 44,
+        "category_name": "Female Skincare",
+        "incidence_rate": 0.443463
+      }
+    ]
+  },
+  {
+    "bundle_id": 42,
+    "size": 3,
+    "n_respondents": 317,
+    "worst_case_time_s": 272.1,
+    "expected_time_s": 124.76,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 28,
+        "category_name": "Alcohol Free Drinks",
+        "incidence_rate": 0.412535
+      },
+      {
+        "category_id": 41,
+        "category_name": "Camping Equipments",
+        "incidence_rate": 0.431193
+      },
+      {
+        "category_id": 47,
+        "category_name": "Nutrition & Fitness Services",
+        "incidence_rate": 0.485294
+      }
+    ]
+  },
+  {
+    "bundle_id": 43,
+    "size": 3,
+    "n_respondents": 52,
+    "worst_case_time_s": 294.61,
+    "expected_time_s": 138.58,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 28,
+        "category_name": "Alcohol Free Drinks",
+        "incidence_rate": 0.412535
+      },
+      {
+        "category_id": 42,
+        "category_name": "Skincare",
+        "incidence_rate": 0.460633
+      },
+      {
+        "category_id": 46,
+        "category_name": "Outdoor Pursuits Apparel",
+        "incidence_rate": 0.500969
+      }
+    ]
+  },
+  {
+    "bundle_id": 44,
+    "size": 3,
+    "n_respondents": 131,
+    "worst_case_time_s": 316.91,
+    "expected_time_s": 141.52,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 37,
+        "category_name": "Beddings",
+        "incidence_rate": 0.417827
+      },
+      {
+        "category_id": 42,
+        "category_name": "Skincare",
+        "incidence_rate": 0.460633
+      },
+      {
+        "category_id": 48,
+        "category_name": "Female Clothing (Black Pepper)",
+        "incidence_rate": 0.493953
+      }
+    ]
+  },
+  {
+    "bundle_id": 45,
+    "size": 3,
+    "n_respondents": 53,
+    "worst_case_time_s": 306.86,
+    "expected_time_s": 143.69,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 40,
+        "category_name": "Free-from Baked Goods",
+        "incidence_rate": 0.441035
+      },
+      {
+        "category_id": 49,
+        "category_name": "Real Estate Service",
+        "incidence_rate": 0.485909
+      },
+      {
+        "category_id": 55,
+        "category_name": "Children's Television",
+        "incidence_rate": 0.497881
+      }
+    ]
+  },
+  {
+    "bundle_id": 46,
+    "size": 3,
+    "n_respondents": 257,
+    "worst_case_time_s": 339.19,
+    "expected_time_s": 168.89,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 40,
+        "category_name": "Free-from Baked Goods",
+        "incidence_rate": 0.441035
+      },
+      {
+        "category_id": 55,
+        "category_name": "Children's Television",
+        "incidence_rate": 0.497881
+      },
+      {
+        "category_id": 51,
+        "category_name": "Female Fashion",
+        "incidence_rate": 0.556831
+      }
+    ]
+  },
+  {
+    "bundle_id": 47,
+    "size": 3,
+    "n_respondents": 99,
+    "worst_case_time_s": 254.76,
+    "expected_time_s": 121.81,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 44,
+        "category_name": "Female Skincare",
+        "incidence_rate": 0.443463
+      },
+      {
+        "category_id": 55,
+        "category_name": "Children's Television",
+        "incidence_rate": 0.497881
+      },
+      {
+        "category_id": 56,
+        "category_name": "Mental Performance Supplements",
+        "incidence_rate": 0.571592
+      }
+    ]
+  },
+  {
+    "bundle_id": 48,
+    "size": 3,
+    "n_respondents": 291,
+    "worst_case_time_s": 413.91,
+    "expected_time_s": 212.07,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 42,
+        "category_name": "Skincare",
+        "incidence_rate": 0.460633
+      },
+      {
+        "category_id": 49,
+        "category_name": "Real Estate Service",
+        "incidence_rate": 0.485909
+      },
+      {
+        "category_id": 53,
+        "category_name": "Prescription Eyewear",
+        "incidence_rate": 0.579009
+      }
+    ]
+  },
+  {
+    "bundle_id": 49,
+    "size": 3,
+    "n_respondents": 132,
+    "worst_case_time_s": 411.61,
+    "expected_time_s": 226.4,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 47,
+        "category_name": "Nutrition & Fitness Services",
+        "incidence_rate": 0.485294
+      },
+      {
+        "category_id": 51,
+        "category_name": "Female Fashion",
+        "incidence_rate": 0.556831
+      },
+      {
+        "category_id": 60,
+        "category_name": "Suncare",
+        "incidence_rate": 0.61727
+      }
+    ]
+  },
+  {
+    "bundle_id": 50,
+    "size": 3,
+    "n_respondents": 93,
+    "worst_case_time_s": 218.74,
+    "expected_time_s": 126.66,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 48,
+        "category_name": "Female Clothing (Black Pepper)",
+        "incidence_rate": 0.493953
+      },
+      {
+        "category_id": 58,
+        "category_name": "Blinds & Window Furnishings",
+        "incidence_rate": 0.57159
+      },
+      {
+        "category_id": 59,
+        "category_name": "Furniture & Homeware",
+        "incidence_rate": 0.610825
+      }
+    ]
+  },
+  {
+    "bundle_id": 51,
+    "size": 3,
+    "n_respondents": 29,
+    "worst_case_time_s": 287.04,
+    "expected_time_s": 161.65,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 55,
+        "category_name": "Children's Television",
+        "incidence_rate": 0.497881
+      },
+      {
+        "category_id": 61,
+        "category_name": "Umbrellas",
+        "incidence_rate": 0.534091
+      },
+      {
+        "category_id": 60,
+        "category_name": "Suncare",
+        "incidence_rate": 0.61727
+      }
+    ]
+  },
+  {
+    "bundle_id": 52,
+    "size": 3,
+    "n_respondents": 301,
+    "worst_case_time_s": 378.03,
+    "expected_time_s": 207.72,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 46,
+        "category_name": "Outdoor Pursuits Apparel",
+        "incidence_rate": 0.500969
+      },
+      {
+        "category_id": 62,
+        "category_name": "Massage, beauty and Wellness Services",
+        "incidence_rate": 0.526608
+      },
+      {
+        "category_id": 52,
+        "category_name": "Outdoor Apparel",
+        "incidence_rate": 0.639257
+      }
+    ]
+  },
+  {
+    "bundle_id": 53,
+    "size": 3,
+    "n_respondents": 82,
+    "worst_case_time_s": 342.68,
+    "expected_time_s": 192.31,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 46,
+        "category_name": "Outdoor Pursuits Apparel",
+        "incidence_rate": 0.500969
+      },
+      {
+        "category_id": 53,
+        "category_name": "Prescription Eyewear",
+        "incidence_rate": 0.579009
+      },
+      {
+        "category_id": 63,
+        "category_name": "Floor Cleaning Appliances",
+        "incidence_rate": 0.611991
+      }
+    ]
+  },
+  {
+    "bundle_id": 54,
+    "size": 3,
+    "n_respondents": 104,
+    "worst_case_time_s": 365.75,
+    "expected_time_s": 202.37,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 62,
+        "category_name": "Massage, beauty and Wellness Services",
+        "incidence_rate": 0.526608
+      },
+      {
+        "category_id": 61,
+        "category_name": "Umbrellas",
+        "incidence_rate": 0.534091
+      },
+      {
+        "category_id": 59,
+        "category_name": "Furniture & Homeware",
+        "incidence_rate": 0.610825
+      }
+    ]
+  },
+  {
+    "bundle_id": 55,
+    "size": 3,
+    "n_respondents": 8,
+    "worst_case_time_s": 367.18,
+    "expected_time_s": 220.41,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 62,
+        "category_name": "Massage, beauty and Wellness Services",
+        "incidence_rate": 0.526608
+      },
+      {
+        "category_id": 56,
+        "category_name": "Mental Performance Supplements",
+        "incidence_rate": 0.571592
+      },
+      {
+        "category_id": 78,
+        "category_name": "Kitchenware Retailers",
+        "incidence_rate": 0.684564
+      }
+    ]
+  },
+  {
+    "bundle_id": 56,
+    "size": 3,
+    "n_respondents": 272,
+    "worst_case_time_s": 209.07,
+    "expected_time_s": 116.09,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 61,
+        "category_name": "Umbrellas",
+        "incidence_rate": 0.534091
+      },
+      {
+        "category_id": 58,
+        "category_name": "Blinds & Window Furnishings",
+        "incidence_rate": 0.57159
+      },
+      {
+        "category_id": 56,
+        "category_name": "Mental Performance Supplements",
+        "incidence_rate": 0.571592
+      }
+    ]
+  },
+  {
+    "bundle_id": 57,
+    "size": 3,
+    "n_respondents": 2,
+    "worst_case_time_s": 346.39,
+    "expected_time_s": 224.08,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 61,
+        "category_name": "Umbrellas",
+        "incidence_rate": 0.534091
+      },
+      {
+        "category_id": 78,
+        "category_name": "Kitchenware Retailers",
+        "incidence_rate": 0.684564
+      },
+      {
+        "category_id": 54,
+        "category_name": "Healthy Snacks",
+        "incidence_rate": 0.691395
+      }
+    ]
+  },
+  {
+    "bundle_id": 58,
+    "size": 3,
+    "n_respondents": 13,
+    "worst_case_time_s": 251.66,
+    "expected_time_s": 154.41,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 58,
+        "category_name": "Blinds & Window Furnishings",
+        "incidence_rate": 0.57159
+      },
+      {
+        "category_id": 60,
+        "category_name": "Suncare",
+        "incidence_rate": 0.61727
+      },
+      {
+        "category_id": 57,
+        "category_name": "Indoor & Outdoor Cleaners",
+        "incidence_rate": 0.675174
+      }
+    ]
+  },
+  {
+    "bundle_id": 59,
+    "size": 3,
+    "n_respondents": 93,
+    "worst_case_time_s": 343.13,
+    "expected_time_s": 238.25,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 59,
+        "category_name": "Furniture & Homeware",
+        "incidence_rate": 0.610825
+      },
+      {
+        "category_id": 63,
+        "category_name": "Floor Cleaning Appliances",
+        "incidence_rate": 0.611991
+      },
+      {
+        "category_id": 71,
+        "category_name": "Chocolate confectionery",
+        "incidence_rate": 0.787926
+      }
+    ]
+  },
+  {
+    "bundle_id": 60,
+    "size": 3,
+    "n_respondents": 39,
+    "worst_case_time_s": 349.42,
+    "expected_time_s": 229.76,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 59,
+        "category_name": "Furniture & Homeware",
+        "incidence_rate": 0.610825
+      },
+      {
+        "category_id": 50,
+        "category_name": "Peanut or Nut Butter",
+        "incidence_rate": 0.627353
+      },
+      {
+        "category_id": 68,
+        "category_name": "Car Insurance",
+        "incidence_rate": 0.748466
+      }
+    ]
+  },
+  {
+    "bundle_id": 61,
+    "size": 3,
+    "n_respondents": 25,
+    "worst_case_time_s": 373.08,
+    "expected_time_s": 266.29,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 59,
+        "category_name": "Furniture & Homeware",
+        "incidence_rate": 0.610825
+      },
+      {
+        "category_id": 76,
+        "category_name": "Eco Products",
+        "incidence_rate": 0.737226
+      },
+      {
+        "category_id": 77,
+        "category_name": "Breakfast or Health Foods",
+        "incidence_rate": 0.766975
+      }
+    ]
+  },
+  {
+    "bundle_id": 62,
+    "size": 3,
+    "n_respondents": 110,
+    "worst_case_time_s": 249.82,
+    "expected_time_s": 174.78,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 63,
+        "category_name": "Floor Cleaning Appliances",
+        "incidence_rate": 0.611991
+      },
+      {
+        "category_id": 54,
+        "category_name": "Healthy Snacks",
+        "incidence_rate": 0.691395
+      },
+      {
+        "category_id": 75,
+        "category_name": "Fast Food",
+        "incidence_rate": 0.790462
+      }
+    ]
+  },
+  {
+    "bundle_id": 63,
+    "size": 3,
+    "n_respondents": 68,
+    "worst_case_time_s": 234.97,
+    "expected_time_s": 167.7,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 63,
+        "category_name": "Floor Cleaning Appliances",
+        "incidence_rate": 0.611991
+      },
+      {
+        "category_id": 72,
+        "category_name": "Sugar confectionery",
+        "incidence_rate": 0.730887
+      },
+      {
+        "category_id": 75,
+        "category_name": "Fast Food",
+        "incidence_rate": 0.790462
+      }
+    ]
+  },
+  {
+    "bundle_id": 64,
+    "size": 3,
+    "n_respondents": 176,
+    "worst_case_time_s": 386.31,
+    "expected_time_s": 273.08,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 60,
+        "category_name": "Suncare",
+        "incidence_rate": 0.61727
+      },
+      {
+        "category_id": 54,
+        "category_name": "Healthy Snacks",
+        "incidence_rate": 0.691395
+      },
+      {
+        "category_id": 71,
+        "category_name": "Chocolate confectionery",
+        "incidence_rate": 0.787926
+      }
+    ]
+  },
+  {
+    "bundle_id": 65,
+    "size": 3,
+    "n_respondents": 304,
+    "worst_case_time_s": 344.42,
+    "expected_time_s": 227.35,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 50,
+        "category_name": "Peanut or Nut Butter",
+        "incidence_rate": 0.627353
+      },
+      {
+        "category_id": 57,
+        "category_name": "Indoor & Outdoor Cleaners",
+        "incidence_rate": 0.675174
+      },
+      {
+        "category_id": 78,
+        "category_name": "Kitchenware Retailers",
+        "incidence_rate": 0.684564
+      }
+    ]
+  },
+  {
+    "bundle_id": 66,
+    "size": 3,
+    "n_respondents": 36,
+    "worst_case_time_s": 345.54,
+    "expected_time_s": 253.92,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 52,
+        "category_name": "Outdoor Apparel",
+        "incidence_rate": 0.639257
+      },
+      {
+        "category_id": 77,
+        "category_name": "Breakfast or Health Foods",
+        "incidence_rate": 0.766975
+      },
+      {
+        "category_id": 75,
+        "category_name": "Fast Food",
+        "incidence_rate": 0.790462
+      }
+    ]
+  },
+  {
+    "bundle_id": 67,
+    "size": 3,
+    "n_respondents": 23,
+    "worst_case_time_s": 276.58,
+    "expected_time_s": 215.71,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 54,
+        "category_name": "Healthy Snacks",
+        "incidence_rate": 0.691395
+      },
+      {
+        "category_id": 74,
+        "category_name": "Chocolate bars and blocks",
+        "incidence_rate": 0.799435
+      },
+      {
+        "category_id": 64,
+        "category_name": "Health & Beauty Retailers",
+        "incidence_rate": 0.849462
+      }
+    ]
+  },
+  {
+    "bundle_id": 68,
+    "size": 3,
+    "n_respondents": 263,
+    "worst_case_time_s": 337.23,
+    "expected_time_s": 256.9,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 65,
+        "category_name": "Mattresses, beds, and pillows",
+        "incidence_rate": 0.712428
+      },
+      {
+        "category_id": 76,
+        "category_name": "Eco Products",
+        "incidence_rate": 0.737226
+      },
+      {
+        "category_id": 73,
+        "category_name": "Wealth Management",
+        "incidence_rate": 0.803077
+      }
+    ]
+  },
+  {
+    "bundle_id": 69,
+    "size": 3,
+    "n_respondents": 2,
+    "worst_case_time_s": 308.94,
+    "expected_time_s": 241.34,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 65,
+        "category_name": "Mattresses, beds, and pillows",
+        "incidence_rate": 0.712428
+      },
+      {
+        "category_id": 76,
+        "category_name": "Eco Products",
+        "incidence_rate": 0.737226
+      },
+      {
+        "category_id": 66,
+        "category_name": "Chocolate",
+        "incidence_rate": 0.859133
+      }
+    ]
+  },
+  {
+    "bundle_id": 70,
+    "size": 3,
+    "n_respondents": 36,
+    "worst_case_time_s": 228.63,
+    "expected_time_s": 174.55,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 65,
+        "category_name": "Mattresses, beds, and pillows",
+        "incidence_rate": 0.712428
+      },
+      {
+        "category_id": 75,
+        "category_name": "Fast Food",
+        "incidence_rate": 0.790462
+      },
+      {
+        "category_id": 67,
+        "category_name": "Coffee",
+        "incidence_rate": 0.791291
+      }
+    ]
+  },
+  {
+    "bundle_id": 71,
+    "size": 3,
+    "n_respondents": 224,
+    "worst_case_time_s": 277.19,
+    "expected_time_s": 223.12,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 72,
+        "category_name": "Sugar confectionery",
+        "incidence_rate": 0.730887
+      },
+      {
+        "category_id": 67,
+        "category_name": "Coffee",
+        "incidence_rate": 0.791291
+      },
+      {
+        "category_id": 66,
+        "category_name": "Chocolate",
+        "incidence_rate": 0.859133
+      }
+    ]
+  },
+  {
+    "bundle_id": 72,
+    "size": 3,
+    "n_respondents": 4,
+    "worst_case_time_s": 269.34,
+    "expected_time_s": 214.52,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 68,
+        "category_name": "Car Insurance",
+        "incidence_rate": 0.748466
+      },
+      {
+        "category_id": 67,
+        "category_name": "Coffee",
+        "incidence_rate": 0.791291
+      },
+      {
+        "category_id": 64,
+        "category_name": "Health & Beauty Retailers",
+        "incidence_rate": 0.849462
+      }
+    ]
+  },
+  {
+    "bundle_id": 73,
+    "size": 3,
+    "n_respondents": 242,
+    "worst_case_time_s": 226.42,
+    "expected_time_s": 177.93,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 68,
+        "category_name": "Car Insurance",
+        "incidence_rate": 0.748466
+      },
+      {
+        "category_id": 74,
+        "category_name": "Chocolate bars and blocks",
+        "incidence_rate": 0.799435
+      },
+      {
+        "category_id": 70,
+        "category_name": "Chips, Crisps, Crackers",
+        "incidence_rate": 0.848787
+      }
+    ]
+  },
+  {
+    "bundle_id": 74,
+    "size": 3,
+    "n_respondents": 217,
+    "worst_case_time_s": 407.64,
+    "expected_time_s": 337.93,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 77,
+        "category_name": "Breakfast or Health Foods",
+        "incidence_rate": 0.766975
+      },
+      {
+        "category_id": 64,
+        "category_name": "Health & Beauty Retailers",
+        "incidence_rate": 0.849462
+      },
+      {
+        "category_id": 69,
+        "category_name": "Healthy Beverages",
+        "incidence_rate": 0.885174
+      }
+    ]
+  },
+  {
+    "bundle_id": 75,
+    "size": 3,
+    "n_respondents": 19,
+    "worst_case_time_s": 352.64,
+    "expected_time_s": 301.24,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 75,
+        "category_name": "Fast Food",
+        "incidence_rate": 0.790462
+      },
+      {
+        "category_id": 66,
+        "category_name": "Chocolate",
+        "incidence_rate": 0.859133
+      },
+      {
+        "category_id": 69,
+        "category_name": "Healthy Beverages",
+        "incidence_rate": 0.885174
+      }
+    ]
+  },
+  {
+    "bundle_id": 76,
+    "size": 3,
+    "n_respondents": 6,
+    "worst_case_time_s": 210.2,
+    "expected_time_s": 174.53,
+    "gender_restricted": null,
+    "categories": [
+      {
+        "category_id": 67,
+        "category_name": "Coffee",
+        "incidence_rate": 0.791291
+      },
+      {
+        "category_id": 70,
+        "category_name": "Chips, Crisps, Crackers",
+        "incidence_rate": 0.848787
+      },
+      {
+        "category_id": 64,
+        "category_name": "Health & Beauty Retailers",
+        "incidence_rate": 0.849462
+      }
+    ]
+  }
+]

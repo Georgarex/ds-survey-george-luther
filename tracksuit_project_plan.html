@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracksuit Survey Allocation Optimisation — Project Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F5F0EA;
+    --bg-warm: #EDE7DD;
+    --surface: #FFFFFF;
+    --surface-warm: #FAF7F2;
+    --border: #DDD5C8;
+    --border-light: #E8E1D6;
+    --text: #2C2520;
+    --text-secondary: #6B5E52;
+    --text-muted: #9A8E82;
+    --accent: #C05E3C;
+    --accent-light: rgba(192, 94, 60, 0.08);
+    --accent-medium: rgba(192, 94, 60, 0.15);
+    --green: #4A7C59;
+    --green-light: rgba(74, 124, 89, 0.08);
+    --blue: #4A6FA5;
+    --blue-light: rgba(74, 111, 165, 0.08);
+    --gold: #B8860B;
+    --gold-light: rgba(184, 134, 11, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 72px 32px 120px;
+  }
+
+  .header { margin-bottom: 64px; }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 50px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+
+  h1 em { font-style: italic; color: var(--accent); }
+
+  .subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 580px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .meta-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .meta-item { display: flex; flex-direction: column; gap: 2px; }
+
+  .meta-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .meta-value { font-size: 15px; font-weight: 600; color: var(--text); }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    color: var(--text);
+  }
+
+  .problem-section { margin-top: 56px; margin-bottom: 56px; }
+
+  .problem-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    line-height: 1.9;
+    font-weight: 300;
+  }
+
+  .constraints-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+
+  .constraint-card {
+    background: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    padding: 22px 26px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .constraint-card:hover { box-shadow: 0 4px 20px rgba(44, 37, 32, 0.06); }
+
+  .constraint-icon {
+    width: 38px; height: 38px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0; font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .constraint-icon.target { background: var(--green-light); color: var(--green); }
+  .constraint-icon.time { background: var(--accent-light); color: var(--accent); }
+  .constraint-icon.demo { background: var(--blue-light); color: var(--blue); }
+
+  .constraint-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+  .constraint-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+
+  .objective-callout {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 14px 14px 0;
+    padding: 26px 30px;
+    margin: 36px 0;
+  }
+
+  .objective-callout .label { margin-bottom: 6px; }
+  .objective-callout p { font-size: 15px; font-weight: 400; line-height: 1.8; color: var(--text-secondary); }
+
+  .stages-section { margin-top: 56px; }
+
+  .stage { position: relative; margin-bottom: 48px; padding-left: 52px; }
+
+  .stage::before {
+    content: ''; position: absolute; left: 17px; top: 44px; bottom: -48px;
+    width: 1px; background: var(--border);
+  }
+
+  .stage:last-child::before { display: none; }
+
+  .stage-number {
+    position: absolute; left: 0; top: 2px; width: 36px; height: 36px;
+    border-radius: 50%; background: var(--surface); border: 2px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700; color: var(--accent); z-index: 1;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .stage-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; flex-wrap: wrap; }
+
+  .stage-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); }
+
+  .stage-time {
+    font-size: 11px; font-weight: 600; color: var(--accent);
+    background: var(--accent-light); padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px;
+  }
+
+  .stage-objective {
+    font-size: 14px; color: var(--text-muted); margin-bottom: 16px;
+    font-style: italic; font-family: 'Playfair Display', serif;
+  }
+
+  .stage-content {
+    background: var(--surface); border: 1px solid var(--border-light);
+    border-radius: 14px; padding: 24px 28px;
+  }
+
+  .stage-content h4 {
+    font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; margin-top: 20px;
+  }
+
+  .stage-content h4:first-child { margin-top: 0; }
+  .stage-content ul { list-style: none; padding: 0; }
+
+  .stage-content li {
+    font-size: 14px; color: var(--text-secondary); padding: 5px 0;
+    padding-left: 22px; position: relative; line-height: 1.7;
+  }
+
+  .stage-content li::before { content: '—'; position: absolute; left: 0; color: var(--border); font-weight: 300; }
+  .outcomes li::before { content: '✓'; color: var(--green); font-weight: 600; }
+
+  code {
+    font-family: 'JetBrains Mono', monospace; font-size: 12.5px;
+    background: var(--bg-warm); padding: 2px 8px; border-radius: 5px; color: var(--accent);
+  }
+
+  .success-section { margin-top: 56px; }
+
+  .success-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px; margin-top: 24px;
+  }
+
+  .success-card {
+    background: var(--surface); border: 1px solid var(--border-light);
+    border-radius: 14px; padding: 28px 20px; text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .success-card:hover { box-shadow: 0 4px 20px rgba(44, 37, 32, 0.06); }
+  .success-metric { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--accent); margin-bottom: 8px; }
+  .success-label { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+
+  .tech-section { margin-top: 56px; }
+
+  .tech-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+
+  .tech-tag {
+    font-size: 12px; font-weight: 500; padding: 7px 16px; border-radius: 8px;
+    background: var(--surface); border: 1px solid var(--border-light); color: var(--text-secondary);
+  }
+
+  .footer {
+    margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-muted); text-align: center;
+    letter-spacing: 2px; text-transform: uppercase;
+  }
+
+  .sep { height: 1px; background: var(--border); margin: 56px 0; }
+
+  @media (max-width: 600px) {
+    .container { padding: 40px 20px 80px; }
+    .stage { padding-left: 44px; }
+    .meta-row { gap: 24px; }
+    .success-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="label">Project Plan</div>
+    <h1>Survey Allocation <em>Optimisation</em></h1>
+    <p class="subtitle">
+      A constrained optimisation approach to minimising respondent cost across Tracksuit's monthly survey operations, while meeting qualification targets and demographic representation requirements.
+    </p>
+    <div class="meta-row">
+      <div class="meta-item">
+        <span class="meta-label">Organisation</span>
+        <span class="meta-value">Tracksuit</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Role</span>
+        <span class="meta-value">Data Scientist</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Effort</span>
+        <span class="meta-value">5–10 hours</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Stack</span>
+        <span class="meta-value">Python · PuLP · Streamlit</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="problem-section">
+    <h2 class="section-title">Problem Statement</h2>
+    <p class="problem-text">
+      Tracksuit conducts surveys across 80 product categories monthly. Each category requires approximately 200 qualified respondents, where qualification is determined by probabilistic incidence rates unique to each category. Respondents have a maximum interview length of 8 minutes. The challenge is to design survey bundles — combinations of categories assigned to individual respondents — and allocate respondents across those bundles such that all qualification targets are met with minimum total respondents surveyed.
+    </p>
+
+    <div class="constraints-grid">
+      <div class="constraint-card">
+        <div class="constraint-icon target">n</div>
+        <div>
+          <div class="constraint-title">Category Targets</div>
+          <div class="constraint-desc">Every category must receive ≈200 qualified respondents per month (≥2,400/year). Required respondent pool varies by incidence rate: a category at 20% incidence requires ~1,000 exposures to yield 200 qualified.</div>
+        </div>
+      </div>
+      <div class="constraint-card">
+        <div class="constraint-icon time">t</div>
+        <div>
+          <div class="constraint-title">Time Budget</div>
+          <div class="constraint-desc">Each respondent has a maximum of 480 seconds (8 minutes) of total interview time. Qualifier questions consume 0 seconds. Bundling multiple categories risks exceeding this limit if a respondent qualifies for several surveys simultaneously.</div>
+        </div>
+      </div>
+      <div class="constraint-card">
+        <div class="constraint-icon demo">d</div>
+        <div>
+          <div class="constraint-title">Demographic Representativeness</div>
+          <div class="constraint-desc">The pool of respondents exposed to each category's qualifier must match national population distributions across gender, age, and region. Qualification skew is acceptable; exposure skew is not.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="objective-callout">
+      <div class="label">Optimisation Objective</div>
+      <p>Minimise total respondents surveyed, subject to all three constraints above. The decision variables are the number of respondents allocated to each pre-defined survey bundle.</p>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <section class="stages-section">
+    <h2 class="section-title">Staged Approach</h2>
+
+    <div class="stage">
+      <div class="stage-number">1</div>
+      <div class="stage-header">
+        <h3 class="stage-title">Toy Problem & Manual Intuition</h3>
+        <span class="stage-time">~1 hour</span>
+      </div>
+      <p class="stage-objective">Build intuition by solving a scaled-down version manually before writing any code.</p>
+      <div class="stage-content">
+        <h4>Approach</h4>
+        <ul>
+          <li>Scale the problem to 10 categories, 10 qualified target per category, ~120 respondents</li>
+          <li>Manually allocate respondents to single-category and multi-category bundles in a spreadsheet</li>
+          <li>Test bundle strategies: pairing high-incidence categories, pairing short surveys, mixing profiles</li>
+          <li>Track time utilisation per respondent and target coverage per category through manual iteration</li>
+        </ul>
+        <h4>Outcomes</h4>
+        <ul class="outcomes">
+          <li>Intuition for which pairing strategies produce efficient allocations</li>
+          <li>A manual baseline solution (total respondents needed for the toy problem)</li>
+          <li>Understanding of which constraints bind first (time vs. incidence vs. coverage)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-number">2</div>
+      <div class="stage-header">
+        <h3 class="stage-title">Random Allocation Benchmark</h3>
+        <span class="stage-time">~1 hour</span>
+      </div>
+      <p class="stage-objective">Establish a naive baseline to quantify the value of optimisation.</p>
+      <div class="stage-content">
+        <h4>Approach</h4>
+        <ul>
+          <li>Generate random bundles (singles, pairs, triples) that fit within the 8-minute budget</li>
+          <li>Allocate respondents uniformly across bundles</li>
+          <li>Simulate qualification outcomes using incidence rates as Bernoulli probabilities</li>
+          <li>Measure total respondents required, per-category coverage variance, and time waste</li>
+        </ul>
+        <h4>Outcomes</h4>
+        <ul class="outcomes">
+          <li>Benchmark metrics: total respondents needed, variance in target coverage, average time utilisation</li>
+          <li>Performance delta vs. manual toy solution to validate intuition</li>
+          <li>Quantified inefficiency of naive allocation as baseline for improvement</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-number">3</div>
+      <div class="stage-header">
+        <h3 class="stage-title">Bundle Generation & PuLP Optimisation</h3>
+        <span class="stage-time">~2 hours</span>
+      </div>
+      <p class="stage-objective">Design candidate bundles, formulate the LP, and solve for optimal allocation.</p>
+      <div class="stage-content">
+        <h4>Bundle Generation</h4>
+        <ul>
+          <li>Enumerate all feasible single-category bundles (80 bundles)</li>
+          <li>Enumerate feasible size-2 bundles: all pairs where combined expected time ≤ 480 seconds</li>
+          <li>Enumerate feasible size-3 bundles: all triples where combined expected time ≤ 480 seconds</li>
+          <li>Pre-compute per bundle: expected time, expected qualified yield per category</li>
+        </ul>
+        <h4>Bundle Design Rationale</h4>
+        <ul>
+          <li>Bundles are intentionally constructed by pairing low-incidence categories with high-incidence categories to maximise expected qualified yield per respondent</li>
+          <li>A respondent assigned three low-incidence categories (e.g., 0.10, 0.15, 0.20) would have an expected yield of only 0.45 qualified responses — high risk of contributing nothing</li>
+          <li>Pairing a low-incidence category (0.10) with a high-incidence category (0.90) raises expected yield to 1.0 — ensuring almost every respondent qualifies for at least one survey</li>
+          <li>This strategy stabilises the distribution of expected yield across all respondents: the median and mean expected yield per respondent remain closely aligned, minimising outliers and ensuring efficient use of every recruited respondent</li>
+          <li>Real-world consideration: although qualifier questions are modelled as 0 seconds, bundle sizes are capped at 3 categories to respect practical limits on respondent burden and survey flow — strong alignment with real-world implementation constraints</li>
+        </ul>
+        <h4>PuLP Formulation</h4>
+        <ul>
+          <li>Decision variables: <code>x_bundle</code> for each candidate bundle (respondent count)</li>
+          <li>Objective: minimise <code>Σ x_bundle</code> across all bundles</li>
+          <li>Category constraints: for each category, <code>Σ (incidence × x_bundle)</code> across containing bundles <code>≥ 200</code></li>
+          <li>Time feasibility: implicit — infeasible bundles excluded at generation</li>
+          <li>Non-negativity: <code>x_bundle ≥ 0</code></li>
+        </ul>
+        <h4>Outcomes</h4>
+        <ul class="outcomes">
+          <li>Optimal bundle set with respondent allocations per bundle</li>
+          <li>Total respondents required (optimised solution)</li>
+          <li>Expected qualified respondents per category verified against targets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-number">4</div>
+      <div class="stage-header">
+        <h3 class="stage-title">Simulation & Validation</h3>
+        <span class="stage-time">~1.5 hours</span>
+      </div>
+      <p class="stage-objective">Validate the optimised allocation under probabilistic conditions via Monte Carlo simulation.</p>
+      <div class="stage-content">
+        <h4>Respondent Generation</h4>
+        <ul>
+          <li>Generate synthetic respondent pool stratified by NZ census proportions</li>
+          <li>Gender: quota-fill to census ratio (e.g., 51% female, 49% male)</li>
+          <li>Age: 6 brackets matched to national distribution</li>
+          <li>Region: proportional to population density</li>
+        </ul>
+        <h4>Simulation</h4>
+        <ul>
+          <li>Assign respondents to bundles per PuLP allocation</li>
+          <li>For each respondent, draw qualification per category (Bernoulli with p = incidence rate)</li>
+          <li>Compute actual time spent (sum of survey lengths for qualified categories)</li>
+          <li>Aggregate: qualified count per category, time budget violations, demographic distribution</li>
+          <li>Run N iterations (e.g., 1,000) to build confidence intervals on target achievement</li>
+        </ul>
+        <h4>Outcomes</h4>
+        <ul class="outcomes">
+          <li>Simulated vs. expected qualified per category with confidence intervals</li>
+          <li>Percentage of respondents exceeding 8-minute budget (target: &lt;1%)</li>
+          <li>Demographic representativeness check across all category exposure pools</li>
+          <li>Expected yield stability: verify that the median and mean expected yield per respondent are closely aligned across the respondent pool — a wide gap indicates imbalanced bundling where some respondents are underutilised while others are overloaded</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-number">5</div>
+      <div class="stage-header">
+        <h3 class="stage-title">Comparative Analysis & Visualisation</h3>
+        <span class="stage-time">~1 hour</span>
+      </div>
+      <p class="stage-objective">Compare strategies, quantify efficiency gains, and present results on a Streamlit dashboard.</p>
+      <div class="stage-content">
+        <h4>Comparisons</h4>
+        <ul>
+          <li>Random allocation vs. optimised (singles only) vs. optimised (pairs) vs. optimised (triples)</li>
+          <li>Metrics: total respondents, target coverage reliability, time utilisation efficiency</li>
+        </ul>
+        <h4>Visualisations</h4>
+        <ul>
+          <li>Bar plot: total respondents by strategy (random vs. optimised variants)</li>
+          <li>Heatmap: qualified respondents per category (expected vs. simulated)</li>
+          <li>Distribution plot: time spent per respondent (CDF across strategies)</li>
+          <li>Expected yield distribution: histogram of expected yield per respondent with median and mean annotated — confirms bundling strategy produces balanced respondent utilisation</li>
+          <li>Stacked bar: allocation breakdown by bundle type (singles, pairs, triples)</li>
+          <li>Demographic validation: exposed pool distributions vs. census targets</li>
+        </ul>
+        <h4>Outcomes</h4>
+        <ul class="outcomes">
+          <li>Quantified efficiency gain (e.g., "optimised uses X% fewer respondents")</li>
+          <li>Visual proof of constraint satisfaction across all categories</li>
+          <li>Insight into which bundle strategies drove the most value</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-number">6</div>
+      <div class="stage-header">
+        <h3 class="stage-title">Documentation & Delivery</h3>
+        <span class="stage-time">~30 min</span>
+      </div>
+      <p class="stage-objective">Package findings, document assumptions, and prepare for technical discussion.</p>
+      <div class="stage-content">
+        <h4>Deliverables</h4>
+        <ul>
+          <li>Reproducible codebase: bundle generation, PuLP solver, simulation, visualisation as modular functions</li>
+          <li>Assumptions documented: uniform incidence rates across demographics, census-based stratification, independence of category qualification</li>
+          <li>Limitations identified: linear relaxation vs. integer constraints, independence assumption, real-world qualifier burden</li>
+          <li>Extension recommendations: demographic-specific incidence rates, dynamic mid-month reallocation, qualifier time modelling</li>
+        </ul>
+        <h4>Outcomes</h4>
+        <ul class="outcomes">
+          <li>Clean, commented, reproducible code ready for review</li>
+          <li>Executive summary of approach and results</li>
+          <li>Prepared talking points for technical interview discussion</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="sep"></div>
+
+  <section class="success-section">
+    <h2 class="section-title">Success Criteria</h2>
+    <div class="success-grid">
+      <div class="success-card">
+        <div class="success-metric">&lt; Random</div>
+        <div class="success-label">Total respondents lower than random allocation baseline</div>
+      </div>
+      <div class="success-card">
+        <div class="success-metric">≥ 200</div>
+        <div class="success-label">Qualified respondents per category met in expectation</div>
+      </div>
+      <div class="success-card">
+        <div class="success-metric">&lt; 1%</div>
+        <div class="success-label">Respondents exceeding 8-minute budget in simulation</div>
+      </div>
+      <div class="success-card">
+        <div class="success-metric">≈ Census</div>
+        <div class="success-label">Demographic representation maintained across exposure pools</div>
+      </div>
+      <div class="success-card">
+        <div class="success-metric">μ ≈ M</div>
+        <div class="success-label">Mean and median expected yield per respondent closely aligned — confirms balanced bundling</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <section class="tech-section">
+    <h2 class="section-title">Technical Stack</h2>
+    <div class="tech-row">
+      <span class="tech-tag">Python 3.11+</span>
+      <span class="tech-tag">PuLP (CBC Solver)</span>
+      <span class="tech-tag">pandas</span>
+      <span class="tech-tag">NumPy</span>
+      <span class="tech-tag">itertools</span>
+      <span class="tech-tag">Streamlit</span>
+      <span class="tech-tag">Plotly / Matplotlib</span>
+      <span class="tech-tag">Git / GitHub</span>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <section class="tech-section">
+    <h2 class="section-title">Data References</h2>
+    <div class="constraints-grid">
+      <div class="constraint-card">
+        <div class="constraint-icon target">A</div>
+        <div>
+          <div class="constraint-title">Age Composition</div>
+          <div class="constraint-desc">Infometrics — New Zealand age composition estimates, 30 June 2025. Respondent age brackets stratified to match national distribution.<br><a href="https://regions.infometrics.co.nz/new-zealand/population/age-composition" style="color: var(--accent); font-size: 12px; text-decoration: none;">regions.infometrics.co.nz</a></div>
+        </div>
+      </div>
+      <div class="constraint-card">
+        <div class="constraint-icon demo">G</div>
+        <div>
+          <div class="constraint-title">Gender Split</div>
+          <div class="constraint-desc">Stats NZ — National population estimates at 31 December 2025. Gender ratio: 49.65% male, 50.35% female. Applied uniformly across age brackets.<br><a href="https://www.stats.govt.nz/information-releases/national-population-estimates-at-31-december-2025/" style="color: var(--accent); font-size: 12px; text-decoration: none;">stats.govt.nz</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    Tracksuit Survey Optimisation · Project Plan · 2026
+  </footer>
+
+</div>
+</body>
+</html>
