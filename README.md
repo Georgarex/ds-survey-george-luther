@@ -40,71 +40,9 @@ The primary dataset. 77 categories with the following fields:
 
 ---
 
-## Project Stages
+## Project Plan
 
-The solution was built in six stages, following the project plan in `tracksuit_project_plan.html`.
-
-### Stage 1 — Toy Problem and Manual Intuition (~1 hour)
-
-Scale the problem to 10 categories with a target of 10 qualified per category and manually allocate respondents to bundles in `fake_category_data_and_toy_problem.xlsx`. Test pairing strategies: mix high and low incidence rates, mix short and long surveys, respect the time budget. Track target coverage and time utilisation per respondent across manual iterations to build intuition before writing any code.
-
-**Outputs:** A working baseline on the toy problem, intuition for which constraints bind first, and an understanding of why pairing dissimilar incidence rates causes over-delivery for the higher-incidence category.
-
-### Stage 2 — Naive Baseline (~1 hour)
-
-Implement a deterministic "no bundling" baseline where every category gets its own pool of respondents sized to `ceil(target / incidence_rate)`. This establishes the upper-bound respondent cost that optimisation must beat and provides a reference for measuring percentage savings.
-
-**Naive total: ~44,790 respondents.** All further strategies are benchmarked against this.
-
-### Stage 3 — Bundle Generation and LP Optimisation (~2 hours)
-
-**Bundle generation.** Enumerate all feasible single, pair, and triple-category combinations from the 73 non-gender-restricted categories. A bundle is feasible if:
-1. Its **worst-case combined survey length** (sum of all category lengths) ≤ 480 seconds — guarantees no respondent exceeds the time budget even if they qualify for every category in the bundle.
-2. The **maximum-to-minimum incidence rate ratio** within the bundle ≤ 1.3 — prevents over-delivery where the rarest category drives up the respondent count and floods the more common categories with excess qualified respondents.
-
-Gender-specific categories (female-only: 4, 35, 45; male-only: 31) are pre-assigned as independent single-category bundles sized for their own incidence rates, not pooled into one gender bundle. Pooling them caused 2–3× over-delivery for higher-incidence categories in the same gender group.
-
-**LP formulation (PuLP / CBC solver).**
-
-- **Decision variables:** `x_b ≥ 0` — respondents allocated to bundle `b`
-- **Objective:** minimise `Σ x_b`
-- **Coverage constraint per category:** `Σ_{b ∋ i} p_i · x_b ≥ rhs_i`
-  - `rhs_i` is the inflated expected qualified count required to achieve 95% confidence: `rhs_i = _prob_exp_qualified(p_i, 200)` (derived from a normal-approximation closed-form quadratic)
-- **Time feasibility:** enforced at candidate generation — infeasible bundles never enter the LP
-- The LP is solved as a continuous relaxation; each non-zero `x_b` is rounded up to the nearest integer
-
-**Probabilistic guarantee.** The `_prob_respondents(p, target)` function solves for the minimum `n` such that `P(Binomial(n, p) ≥ target) ≥ 0.95`. This uses the one-sided z-score `z = 1.6449` (i.e. `norm.ppf(0.95)`), not the two-sided `1.96`. The closed-form solution: let `w = sqrt(n·p)`, solve `w² - z·sqrt(1-p)·w - target ≥ 0`, giving `w = (z·sqrt(q) + sqrt(z²·q + 4·target)) / 2`, `n = ceil(w²/p)`.
-
-**Outputs:** Optimal bundle set and respondent allocations. LP-optimal total: ~17,500–20,000 respondents (55–60% reduction vs. naive).
-
-### Stage 4 — Greedy Heuristic (~1 hour)
-
-Implement a greedy algorithm as a faster, interpretable alternative to the LP. Categories are sorted by incidence rate ascending. The rarest unassigned category always seeds a new bundle. The inner loop scans remaining unassigned categories and adds the first one that passes both the time budget guard and the over-delivery guard (`n_est × cand_p ≤ target × 1.3`). Bundle size is capped at 3.
-
-The greedy algorithm is substantially faster than the LP solver (no combinatorial candidate enumeration or solver runtime) but produces suboptimal pairings for categories with large gaps in their incidence rates — particularly rare singletons that cannot pair with anything within the IR ratio limit.
-
-**Outputs:** Greedy bundle set. Greedy total: ~20,000–21,000 respondents (~54% reduction vs. naive).
-
-### Stage 5 — Simulation and Validation (~1.5 hours)
-
-Monte Carlo simulation validates the pre-computed allocation under probabilistic conditions. For each simulated month:
-
-1. Each bundle draws its `n_respondents` from the respondent pool
-2. Each respondent independently qualifies for each category in their bundle (Bernoulli draw with `p = incidence_rate`)
-3. Qualified respondents complete the category survey (consuming `category_length_seconds`)
-4. Aggregates: qualified count per category, mean and median interview time per respondent, percentage exceeding 480 seconds
-
-The simulation runs for 1–24 months (configurable in the dashboard) with a fresh unseeded RNG on every run so results are stochastic and no two runs are identical.
-
-**Key validation checks:**
-- Every category meets ≥ 200 qualified respondents per month in ≥ 90% of simulated months
-- Zero respondents exceed the 480-second budget (worst-case time constraint is hard)
-- Mean ≈ median interview time per respondent — a large gap signals unbalanced bundling where some respondents qualify for multiple surveys while others qualify for none
-- Demographic representativeness is maintained by construction: respondents are stratified to NZ census proportions before allocation
-
-### Stage 6 — Dashboard, Documentation, and Delivery (~1 hour)
-
-Interactive Streamlit dashboard (`app.py`) with six tabs for comparative analysis. Outputs are persisted to `model_outputs/` on every `python main.py` run.
+The full staged approach — toy problem, naive baseline, LP formulation, greedy heuristic, simulation, and dashboard — is documented in **`tracksuit_project_plan.html`**. Open it in a browser for the complete breakdown with objectives, rationale, and success criteria per stage.
 
 ---
 
